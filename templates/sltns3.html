@@ -1,0 +1,93 @@
+{% include "user_header.html" %}
+<head>
+<style>
+.results-container {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.results-section {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.results-row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.results-label {
+  font-weight: bold;
+  color: #009933;
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.results-value {
+  color: #333;
+  flex: 1;
+  text-align: justify;
+}
+
+.results-possibilities {
+  text-align: justify;
+}
+</style>
+</head>
+<section class="w3l-about-breadcrumb text-left">
+  <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+    <div class="container">
+      <h2 class="title">Possibilities & Solutions</h2>
+      <ul class="breadcrumbs-custom-path mt-2">
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="contact-form py-5" id="contact">
+  <div class="container py-lg-5 py-md-4">
+    <div class="contacts12-main mb-5">
+      <div class="col-lg-6 bottom-ab-right mt-lg-0 mt-5">
+        <img src="{{ url_for('static',filename='detection.jpg')}}" width="350" height="350" class="img-curve img-fluid" alt="" />
+      </div>
+    </div>
+
+    <div class="results-container">
+      <div class="results-section">
+        <div class="results-row">
+          <span class="results-label">Plant Name:</span>
+          <span class="results-value">{{ plant }}</span>
+        </div>
+        <div class="results-row">
+          <span class="results-label">Disease:</span>
+          <span class="results-value">{{ disease }}</span>
+        </div>
+        <div class="results-row">
+          <span class="results-label">Possibilities:</span>
+
+          <span class="results-value results-possibilities">{{ possibilities }}</span>
+        </div>
+        <div class="results-row">
+          <span class="results-label">Solutions:</span>
+          <span class="results-value">{{ solution }}</span>
+        </div>
+          <div class="results-row">
+          <a href="/lang_translator/Telugu/{{plant}}/{{disease}}/{{possibilities}}/{{ solution }}"><font color="green" size="3">Telugu</font> </a>  &nbsp; <a href="/lang_translator/Hindi/{{plant}}/{{disease}}/{{possibilities}}/{{ solution }}"><font color="green" size="3">Hindi</font> </a> &nbsp; <a href="/lang_translator/Tamil/{{plant}}/{{disease}}/{{possibilities}}/{{ solution }}"><font color="green" size="3">Tamil</font> </a>&nbsp;
+            <a href="/lang_translator/English/{{plant}}/{{disease}}/{{possibilities}}/{{ solution }}"><font color="green" size="3">English</font> </a>
+        </div>
+          <!-- Language Buttons -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

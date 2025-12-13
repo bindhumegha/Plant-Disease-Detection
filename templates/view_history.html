@@ -1,0 +1,71 @@
+{% include "user_header.html "%}
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:hover {background-color: #ddd;}
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:  #03b41d;
+  color: white;
+}
+</style>
+</head>
+
+<section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container">
+        <h2 class="title">History</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#">User</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>View History</li>
+        </ul>
+      </div>
+    </div>
+  </section><br><br><br>
+
+<div class="row contact-rooo big-padding no-margin">
+        <div class="container">
+           <div class="row">
+<table id="customers" >
+  <tr>
+    <th>User&nbsp;Id</th>
+    <th>Plant&nbsp;Name</th>
+        <th>Disease</th>
+      <th>Possibilities</th>
+      <th>Solutions</th>
+        <th>Date</th>
+
+  </tr>
+                   {% for data in rawdata %}
+      <tr>
+        <td><strong>{{data[0]}}</strong></td>
+          <td><strong>{{data[1]}}</strong></td>
+        <td><strong>{{data[2]}}</strong></td>
+        <td><strong>{{data[3]}}</strong></td>
+          <td><strong>{{data[4]}}</strong></td>
+          <td><strong>{{data[5]}}</strong></td>
+
+{% endfor %}
+
+</tr>
+</table>          </div>
+
+
+        </div>
+      </div>
+
+<br><br><br><br><br>
+
+
+{% include "footer.html "%}

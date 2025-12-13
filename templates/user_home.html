@@ -1,0 +1,38 @@
+{% include "user_header.html "%}
+
+<section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+      <div class="owl-one owl-carousel owl-theme">
+
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg text-left">
+                    <p> </p>
+                    <font color="white" size="+5">Welcome User : <font color="orange">{{name}}</font>
+                    <!--a href="about.html" class="btn btn-white">Read More</a>-->
+                  </div>
+                </div>
+              </div>
+              <div class="banhny-w3grids">
+                <div class="banhny-w3grids-1">
+                  <img src="{{ url_for('static',filename='assets/images/banner3.jpg')}}" class="img-curve img-fluid" alt="" />
+
+                  <h4><a href="#" class="hnys-title">Rice Leaf Diseases Classification Using  CNN With Transfer Learning</a></h4>
+                </div>
+                <div class="banhny-w3grids-1">
+                  <img src="{{ url_for('static',filename='assets/images/banner4.jpg')}}" class="img-curve img-fluid" alt="" />
+                  <h4><a href="#" class="hnys-title">Rice Leaf Diseases Classification Using  CNN With Transfer Learning</a></h4>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+{% include "footer.html "%}
